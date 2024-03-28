@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/musicList/musicList",
+    "pages/find/find",
+    "pages/play/play"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#C20C0C",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+      "selectedColor": "#C20C0C",
+      "list": [{
+          "pagePath": "pages/musicList/musicList",
+          "text": "首页",
+          "iconPath": "/images/performance.png",
+          "selectedIconPath": "/images/performance-active.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "播客",
+        "iconPath": "/images/播客.png",
+        "selectedIconPath": "/images/播客-active.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

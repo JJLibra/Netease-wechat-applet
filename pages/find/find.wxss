@@ -1,0 +1,109 @@
+/* pages/find/find.wxss */
+/* 搜索栏 */
+.search_wrap{
+    width: 88%;
+    height: 80rpx;
+    background-color: rgba(230, 224, 224, 0.664);
+    margin: 20rpx auto;
+    display: flex;
+    align-items: center;
+    border-radius: 60rpx;
+    overflow: hidden;
+}
+.btn_wrap{
+    margin-left: 10rpx;
+    height: 100%;
+    width: 80rpx;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_wrap image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.search{
+    padding-left: 30rpx;
+    height: 100%;
+    width: 440rpx;
+    /* background-color: tomato; */
+}
+/* 热门推荐栏 */
+.hotTab{
+    width: 90%;
+    height: 65rpx;
+    /* background-color: pink; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    justify-content: space-between;
+}
+.hotTab .hottab_text{
+    font-size: 38rpx;
+    font-weight: 600;
+}
+.hottab_more{
+    font-size: 30rpx;
+    width: 100rpx;
+    height: 40rpx;
+    border-radius: 10rpx;
+    border: solid hsla(0, 1%, 68%, 0.76);
+    /* background-color: black; */
+    color: #888888;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+/* 推荐内容 */
+.hotList{
+    width: 90%;
+    /* height: 600rpx; */
+    /* background-color: pink; */
+    margin: 0 auto;
+}
+.hotitems{
+    float: left;
+    width: 225rpx;
+    height: 242rpx;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hotitems image{
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 12rpx;
+}
+.hotitems text{
+    width: 180rpx;
+    line-height: 50rpx;
+    text-align: center;
+    /* background-color: blueviolet; */
+    font-size: 28rpx;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* 推荐栏自适应 */
+.clearfix::after{
+    content: "";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+}
+
+
+
+
+
+
+
+

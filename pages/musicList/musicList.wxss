@@ -1,0 +1,94 @@
+/* pages/musicList/musicList.wxss */
+/* 轮播图 */
+swiper{
+    width: 100%;
+    height: 280rpx;
+}
+swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+/* 音乐列表 */
+.list-wrap{
+    width: 100%;
+    height: 200rpx;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10rpx 0rpx;
+    box-shadow:0rpx 2rpx 1rpx #f1f1f1;
+}
+.list-image{
+    margin-left: 30rpx;
+    width: 160rpx;
+    height: 160rpx;
+    /* background-color: plum; */
+}
+.list-image image{
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 10rpx;
+}
+.list-text{
+    width: 320rpx;
+    height: 160rpx;
+    /* background-color: red; */
+    /* padding-left: 30rpx; */
+}
+.list-text view{
+    /* 不换行 */
+    white-space: nowrap;
+    overflow: hidden;
+    /* 溢出以省略号结尾 */
+    text-overflow: ellipsis;
+}
+.list-text view:nth-child(1){
+    line-height: 80rpx;
+    font-size: 32rpx;
+}
+.list-text view:nth-child(2){
+    font-size: 26rpx;
+    color: #555;
+}
+.list-button{
+    margin-right: 20rpx;
+    width: 140rpx;
+    height: 160rpx;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+}
+.list-button image{
+    width: 120rpx;
+    height: 120rpx;
+}
+/* 搜索框 */
+.searchbox{
+    width: 85%;
+    height: 80rpx;
+    align-items: center;
+    margin: 20rpx auto;
+    border-radius: 50rpx;
+    background-color: rgba(230, 224, 224, 0.664);
+    display: flex;
+    overflow: hidden;
+}
+.search{
+    width: 67%;
+    height: 90rpx;
+    margin-left: 10rpx;
+    /* background-color: skyblue; */
+}
+.btn{
+    width: 20%;
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+.btn image{
+    width: 60rpx;
+    height: 64rpx;
+}

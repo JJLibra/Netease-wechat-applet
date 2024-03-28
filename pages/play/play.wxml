@@ -1,0 +1,57 @@
+<!--pages/play/play.wxml-->
+<!-- 页面 -->
+<view id="bg">
+    <image class="bg" src="{{imgurl}}"></image>
+</view>
+<!-- 歌名 -->
+<view class="name">{{musicName}}</view>
+<!-- 滑动栏 -->
+<swiper class="musicPic">
+    <!-- 唱片栏 -->
+    <swiper-item class="picture">
+        <image class="{{action.method=='pause'||action.method=='setCurrentTime'?'Pic':''}}" src="{{imgurl}}"></image>
+    </swiper-item>
+    <!-- 歌词栏 -->
+    <swiper-item class="lyricsitem">
+        <scroll-view class="lyricsList" scroll-y="true" scroll-top="{{top}}">
+            <view class="nothing">
+                <view> 111 </view>
+                <view> 111 </view>
+                <view> 111 </view>
+                <view> 111 </view>
+            </view>
+            <!-- wx:for-index="in"为当前播放的歌词的索引为in -->
+            <view wx:for-index="in" wx:for="{{lyricList}}" wx:key="*this" class="{{in==index?'lyricHigh':''}}">{{item[1]}}</view>
+            <view class="nothing">
+                <view> 111 </view>
+                <view> 111 </view>
+                <view> 111 </view>
+                <view> 111 </view>
+                <view> 111 </view>
+                <view> 111 </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>
+<!-- 进度条 -->
+<view class="playTime">
+    <view class="begintime">{{beginTime}}</view>
+    <slider class="slider_wrap" block-size="12" color="rgba(212, 210, 210, 0.76)" activeColor="white" max="{{maxTime}}" value="{{playtime}}" bindchange="changePlaytime"></slider>
+    <view class="endtime">{{endTime}}</view>
+</view>
+<!-- 播放栏 -->
+<view class="playTab">
+    <view class="rePlay">
+        <image bindtap="changemode" src="/images/{{mode=='loop'? '循环':'循环一次'}}.png"></image>
+    </view>
+    <view class="play">
+        <image bindtap="playPrevmusic" src="/images/上一首.png"></image>
+        <image bindtap="pause" class="pause" src="/images/{{action.method=='pause'||action.method=='setCurrentTime'?'播放':'暂停'}}.png"></image>
+        <image bindtap="playNextmusic" src="/images/下一首.png"></image>
+    </view>
+    <view class="list">
+        <image src="/images/音乐菜单.png"></image>
+    </view>
+</view>
+<!-- 音乐播放 -->
+<audio bindended="reachMode" bindtimeupdate="timechange" src="http://music.163.com/song/media/outer/url?id={{musicID}}.mp3" action="{{action}}"></audio>

@@ -1,0 +1,38 @@
+<!--pages/find/find.wxml-->
+<!-- 搜索框 -->
+<view class="search_wrap">
+    <view class="btn_wrap">
+        <image src="/images/搜索.png"></image>
+    </view>
+    <input placeholder="发现属于你的精彩" class="search" type="text"></input>
+</view>
+<!-- 热门推荐栏 -->
+<view class="hotTab">
+    <view class="hottab_text">热门推荐</view>
+    <view class="hottab_more">更多></view>
+</view>
+<!-- 推荐内容 -->
+<view class="hotList clearfix">
+    <block wx:for="{{hotList}}" wx:key="*this">
+        <view class="hotitems">
+            <image src="/images/R-C.png"></image>
+            <text>小猫小猫小猫小猫小猫小猫</text>
+        </view>
+    </block>
+</view>
+<!-- 新歌推荐栏 -->
+<view class="hotTab">
+    <view class="hottab_text">新歌推荐</view>
+    <view class="hottab_more">更多></view>
+</view>
+<!-- 推荐内容 -->
+<view class="hotList clearfix">
+    <block wx:for="{{hotList}}" wx:key="*this">
+        <view class="hotitems">
+            <image src="/images/rp.png"></image>
+            <text>小猫小猫看天</text>
+        </view>
+    </block>
+</view>
+
+

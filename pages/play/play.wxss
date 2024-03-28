@@ -1,0 +1,170 @@
+/* pages/play/play.wxss */
+/* 背景 */
+#bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.bg{
+    /* position: fixed; */
+    width: 170%;
+    height: 100%;
+    opacity: 0.4;
+}
+/* 歌名栏 */
+.name{
+    position: relative;
+    line-height: 150rpx;
+    font-size: 50rpx;
+    color: white;
+    text-align: center;
+}
+/* 唱片栏 */
+.musicPic{
+    width: 100%;
+    height: 820rpx;
+    /* background-color: red; */
+}
+.picture{
+    /* background-color: blanchedalmond; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.picture image{
+    margin-top: 70rpx;
+    width: 420rpx;
+    height: 420rpx;
+    border-radius: 50%;
+    border: 80rpx solid rgba(18, 12, 12, 0.911);
+    box-shadow: 2rpx 2rpx 15rpx black;
+    animation: playimg 20s linear infinite;
+}
+/* 动画状态 */
+.picture .Pic{
+    animation-play-state: paused;
+}
+/* 旋转动画 */
+@keyframes playimg{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* 播放栏 */
+.playTab{
+    width: 100%;
+    height: 150rpx;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #C20C0C;
+    bottom: 0rpx;
+}
+.rePlay{
+    width: 100rpx;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+}
+.rePlay image{
+    width: 52rpx;
+    height: 60rpx;
+    margin-left: auto;
+    margin-right: 0;
+}
+.play{
+    width: 500rpx;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.play image:nth-child(1){
+    width: 80rpx;
+    height: 80rpx;
+}
+.play image:nth-child(2){
+    width: 120rpx;
+    height: 120rpx;
+}
+.play image:nth-child(3){
+    width: 80rpx;
+    height: 80rpx;
+}
+.list{
+    width: 100rpx;
+    /* background-color: pink; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.list image{
+    width: 60rpx;
+    height: 60rpx;
+}
+/* 歌词栏 */
+.lyricsitem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lyricsList{
+    margin-top: 20rpx;
+    width: 680rpx;
+    height: 860rpx;
+    /* background-color: seagreen; */
+    text-align: center;
+}
+.lyricsList view{
+    font-size: 34rpx;
+    color: rgb(177, 173, 173);
+    /* height: 60rpx; */
+    line-height: 46rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+.nothing{
+    opacity: 0;
+}
+/* 当前播放歌词，高亮 */
+.lyricsList .lyricHigh{
+    font-size: 36rpx;
+    color: white;
+}
+/* 进度条 */
+.playTime{
+    width: 100%;
+    height: 80rpx;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-around; */
+    position: fixed;
+    bottom: 150rpx;
+    /* opacity: 0.8; */
+}
+.playTime view{
+    color: rgba(212, 210, 210, 0.76);
+    font-size: 28rpx;
+}
+.begintime{
+    margin-left: 40rpx;
+    /* background-color: turquoise; */
+}
+.slider_wrap{
+    width: 100%;
+    opacity: 0.8;
+}
+.endtime{
+    margin-right: 40rpx;
+    /* background-color: chartreuse; */
+}
+
+
+

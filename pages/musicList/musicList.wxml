@@ -1,0 +1,31 @@
+<!--pages/musicList/musicList.wxml-->
+<!-- 轮播图 -->
+<swiper indicator-dots indicator-color="white" indicator-active-color="#C20C0C" circular autoplay interval="3000">
+    <block wx:for="{{lunboList}}" wx:key="*this">
+        <swiper-item>
+            <image src="{{item}}"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<!-- 搜索框 -->
+<view class="searchbox">
+    <view class="btn">
+        <image bindtap="search" src="/images/搜索.png"></image>
+    </view>
+    <input placeholder="世界很大，精彩由你" bindinput="keychange" class="search" type="text"></input>
+</view>
+<!-- 音乐列表 -->
+<block wx:for="{{musicList}}" wx:key="*this" wx:for-index='i'>
+    <view class="list-wrap">
+        <view class="list-image">
+            <image src="{{picUrl[i]}}"></image>
+        </view>
+        <view class="list-text">
+            <view>{{item.musicName}}</view>
+            <view>{{item.author}}</view>
+        </view>
+        <view data-id="{{item.id}}" bindtap="play" class="list-button">
+            <image src="/images/play-active.png"></image>
+        </view>
+    </view>
+</block>
